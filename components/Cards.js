@@ -21,6 +21,8 @@
 //
 // Use your function to create a card for each of the articles, and append each card to the DOM.
 
+// Making the get request using axios.
+
 axios.
 
 get('https://lambda-times-api.herokuapp.com/articles')
@@ -54,11 +56,14 @@ function cards(obj) {
     const img = document.createElement('img');
     const authorSpan = document.createElement('span');
 
-    //creating class to elements
+    
+
+    //creating class to elements for styling
     cardDiv.classList.add('card');
     headlineDiv.classList.add('headline');
     authorDiv.classList.add('author');
     imgDiv.classList.add('img-container');
+    
 
     //adding children inside parent elements
     cardDiv.appendChild(headlineDiv);
@@ -71,6 +76,11 @@ function cards(obj) {
     headlineDiv.textContent = obj.headline;
     img.src = obj.authorPhoto;
     authorSpan.textContent = obj.authorName;
+    
+    headlineDiv.addEventListener('click', () =>{
+        console.log(headlineDiv.textContent = obj.headline)
+         
+     });
 
     return cardDiv;
 

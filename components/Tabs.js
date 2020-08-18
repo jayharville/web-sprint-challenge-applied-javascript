@@ -10,6 +10,7 @@
 //
 // NOTE: you do _not_ need to install axios as it's included in the HTML via script element
 
+// Making the get request using axios.
 
 axios.
 
